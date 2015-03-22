@@ -1,0 +1,44 @@
+{
+    "name": "zonuexe/stringwidth",
+    "description": "Measure string width",
+    "license": ["MPL-2.0", "MPL-1.1"],
+    "authors": [
+        {
+            "name": "USAMI Kenta",
+            "email": "tadsan@zonu.me"
+        },
+        {
+            "name": "Hayaki Saito"
+        }
+    ],
+    "keywords": [
+        "eastasian",
+        "unicode",
+        "string",
+        "width",
+        "eaw"
+    ],
+    "require": {
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+         "phpunit/phpunit": "~4.3.5"
+        ,"theseer/phpdox":  "~0.7.0"
+        ,"phploc/phploc":   "~2.0.6"
+        ,"phpmd/phpmd":     "@stable"
+        ,"satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Teto\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Teto\\": "tests/"
+        }
+    },
+    "suggest": {
+        "ext-intl": "use \\Locale class when $wcwidth function has not been instructed"
+    }
+}
