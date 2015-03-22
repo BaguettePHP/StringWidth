@@ -44,6 +44,34 @@ final class StringWidth
     }
 
     /**
+     * @param  string $input
+     * @return int
+     */
+    public static function asSingle($input)
+    {
+        static $single;
+        if (empty($single)) {
+            $single = new StringWidth([new \Teto\StringWidth\Tanasinn\Single, 'wcwidth']);
+        }
+
+        return $single->getWidth($input);
+    }
+
+    /**
+     * @param  string $input
+     * @return int
+     */
+    public static function asDouble($input)
+    {
+        static $double;
+        if (empty($double)) {
+            $double = new StringWidth([new \Teto\StringWidth\Tanasinn\Double, 'wcwidth']);
+        }
+
+        return $double->getWidth($input);
+    }
+
+    /**
      * @return callable
      */
     public static function getwcwidth()

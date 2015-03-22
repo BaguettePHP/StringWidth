@@ -1,6 +1,6 @@
 {
     "name": "zonuexe/stringwidth",
-    "description": "Measure string width",
+    "description": "Measure string width (support Unicode east asian ambiguous width)",
     "license": ["MPL-2.0", "MPL-1.1"],
     "authors": [
         {

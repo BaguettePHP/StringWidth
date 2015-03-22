@@ -15,10 +15,7 @@ final class StringWidthTest extends \PHPUnit_Framework_TestCase
      */
     public function test_as_single($expected, $input)
     {
-        $wcwidth = [new \Teto\StringWidth\Tanasinn\Single, 'wcwidth'];
-        $actual = new StringWidth($wcwidth);
-
-        $this->assertEquals($expected, $actual->getWidth($input));
+        $this->assertEquals($expected, StringWidth::asSingle($input));
     }
 
     public function dataProviderFor_test_as_single()
@@ -38,10 +35,7 @@ final class StringWidthTest extends \PHPUnit_Framework_TestCase
      */
     public function test_as_double($expected, $input)
     {
-        $wcwidth = [new \Teto\StringWidth\Tanasinn\Double, 'wcwidth'];
-        $actual = new StringWidth($wcwidth);
-
-        $this->assertEquals($expected, $actual->getWidth($input));
+        $this->assertEquals($expected, StringWidth::asDouble($input));
     }
 
     public function dataProviderFor_test_as_double()

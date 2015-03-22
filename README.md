@@ -1,7 +1,33 @@
 PHP StringWidth
 ===============
 
-Measure string width
+Measure string width (support Unicode east asian ambiguous width)
+
+Install
+-------
+
+```
+composer require 'zonuexe/stringwidth:~0.1.1'
+```
+
+Usage
+-----
+
+**Notice: Input string must be UTF-8 encoded**
+
+```php
+<?php
+
+\Teto\StringWidth::asSingle('ABC'); //=> 3
+\Teto\StringWidth::asDouble('ABC'); //=> 3
+
+\Teto\StringWidth::asSingle('☆☆☆'); //=> 3
+\Teto\StringWidth::asDouble('☆☆☆'); //=> 6
+
+\Teto\StringWidth::asSingle('도서관'); //=> 6
+\Teto\StringWidth::asDouble('도서관'); //=> 6
+
+```
 
 Copyright
 ---------
